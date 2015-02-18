@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
+  get 'states' => "states#index", as: :states
 
   root 'dashboard#public'
 

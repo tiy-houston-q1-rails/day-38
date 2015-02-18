@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Stock Purchases</h1>
+
+<div id="stock-table">
+  <%= render partial: 'stock_list' %>
+</div>
+
+<br>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#stock-modal">New Stock Purchase</button>
+
+<div class="modal fade" id="stock-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div id="stock-form">
+        <%= render partial: 'form' %>
+      </div>
+    </div>
+  </div>
+</div>

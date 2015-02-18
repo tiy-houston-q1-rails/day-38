@@ -1,0 +1,23 @@
+<table>
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stock_purchases.each do |stock_purchase| %>
+      <tr>
+        <td><%= stock_purchase.symbol %></td>
+        <td><%= stock_purchase.quantity %></td>
+        <td><%= stock_purchase.price %></td>
+        <td><%= link_to 'Show', stock_purchase %></td>
+        <td><%= link_to 'Edit', edit_stock_purchase_path(stock_purchase) %></td>
+        <td><%= link_to 'Destroy', stock_purchase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

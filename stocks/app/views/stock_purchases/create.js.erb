@@ -1,0 +1,9 @@
+
+
+<% if @stock_purchase.errors.any? %>
+  $("#stock-form").html("<%= escape_javascript render partial: 'form' %>");
+<% else %>
+  $("#stock-form").html("<%= j render partial: 'form' %>");
+  $("#stock-modal").modal('hide');
+  $("#stock-table").html("<%= j render partial: 'stock_list' %>");
+<% end %>

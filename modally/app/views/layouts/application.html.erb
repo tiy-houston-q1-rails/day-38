@@ -10,14 +10,12 @@
 
 <div class="container">
 
-  <% if @current_user %>
-    <p>
-      Hi <%= @current_user.email %>
-    </p>
-    <p class="pull-right">
-      <%= link_to "Sign Out", sign_out_path, class: "btn btn-default" %>
-    </p>
-  <% end %>
+  <div id="header-nav">
+    <%= render partial: "layouts/nav" %>
+  </div>
+
+
+
 
   <%= yield %>
 </div>

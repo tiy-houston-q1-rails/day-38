@@ -1,0 +1,8 @@
+<%= simple_form_for @stock_purchase, remote: true do |f| %>
+
+  <%= f.input :symbol %>
+  <%= f.input :price %>
+  <%= f.input :quantity %>
+  <%= f.submit class: "btn btn-success btn-block" %>
+
+<% end %>
