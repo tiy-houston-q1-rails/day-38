@@ -1,0 +1,6 @@
+<%= simple_form_for @album, url: wizard_path, method: :put do |f| %>
+  <%= f.input :year, as: :select, collection: (1900..Date.today.year), hint: "The year the album dropped" %>
+  <%= f.submit class: "btn btn-default" %>
+<% end %>
+
+<%= link_to "Next", next_wizard_path %>

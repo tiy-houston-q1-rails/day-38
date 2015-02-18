@@ -1,0 +1,7 @@
+<%= simple_form_for @album, url: wizard_path, method: :put do |f| %>
+  <%= f.input :name %>
+  <%= f.input :buyer %>
+  <%= f.submit class: "btn btn-default" %>
+<% end %>
+
+<%= link_to "Next", next_wizard_path %>
