@@ -47,13 +47,14 @@ Homework
 
 1. Implement Autocomplete in a Rails app
 2. Import the CSV in `assets/academy_awards.csv` into a `Nomination` model
-3. It should let you search, using `pg_search` for Academy Awards Nominee
-4. Use `https://github.com/Nerian/bootstrap-typeahead-rails` to get the assets
+3. It should let you search, optionally using `pg_search` for Academy Awards Nominee
+4. Use `https://github.com/yourabi/twitter-typeahead-rails` to get the assets
    loaded
 5. Use http://twitter.github.io/typeahead.js/ and the Remote example to load
    from a JSON api (http://twitter.github.io/typeahead.js/examples/)
 
 notes: 
 
+* Refer to the modally (/states)
 * The import is best done in a Rake task, but could also be in seeds
 * Custom Templates would be very cool, but completely optional
