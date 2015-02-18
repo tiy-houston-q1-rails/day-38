@@ -1,0 +1,29 @@
+<%= form_for(@stock_purchase, id: "stock-form") do |f| %>
+  <% if @stock_purchase.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stock_purchase.errors.count, "error") %> prohibited this stock_purchase from being saved:</h2>
+
+      <ul>
+      <% @stock_purchase.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :symbol %><br>
+    <%= f.text_field :symbol, id: "stock-symbol"%>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.number_field :quantity, id: "stock-quantity"%>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.number_field :price, id: "stock-price"%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
