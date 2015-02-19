@@ -1,5 +1,12 @@
 class Album < ActiveRecord::Base
 
+  include PgSearch
+  pg_search_scope :search,
+    :against => [:name, :buyer, :year],
+    :using => {
+    :tsearch => {:dictionary => "english"}
+  }
+
   validates :name,  :presence => true, :if => :active_or_name?
   validates :buyer, :presence => true, :if => :active_or_name?
   validates :photo_url, :presence => true, :if => :active_or_photo?

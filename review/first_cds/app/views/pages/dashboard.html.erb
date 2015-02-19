@@ -1,6 +1,14 @@
 <h1>Pages#dashboard</h1>
 <p>Find me in app/views/pages/dashboard.html.erb</p>
 
+<%= form_tag root_path, method: :get, remote: true do %>
+  <%= text_field_tag :qs, params[:qs], class: "form-control", placeholder: "Search" %>
+<% end %>
+
+<div id="search-results" class="row">
+</div>
+<br/>
+
 <%= link_to "New Album", album_path(:name) %>
 
 <% @albums.each do |album| %>

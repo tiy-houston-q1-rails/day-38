@@ -1,0 +1,8 @@
+<% @albums.each do |album| %>
+<div class="album col-xs-6 col-md-3">
+  <%= image_tag album.photo_url, class: "img-responsive"%>
+  <h3><%= album.name %></h3>
+  <h6>By <%= album.buyer %> in <%= album.year %></h6>
+  <p> That's <%= Date.today.year - album.year %> years ago</p>
+</div>
+<% end %>
